@@ -65,6 +65,11 @@ section .sub{color:var(--muted);margin-bottom:26px}
 .hero-top>div{flex:1;min-width:0}
 .avatar{width:200px;height:200px;border-radius:50%;object-fit:cover;flex:none;border:4px solid #fff;box-shadow:0 0 0 3px var(--blue-3),0 12px 28px rgba(8,87,195,.18)}
 @media (max-width:720px){.hero-top{flex-direction:column-reverse;align-items:flex-start;gap:22px}.avatar{width:128px;height:128px}}
+.card.wide{grid-column:1/-1}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.shots a{display:block;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#0B0B0B}
+.shots img{display:block;width:100%;height:190px;object-fit:cover;object-position:top}
+.shots span{display:block;font-size:11.5px;color:var(--muted);padding:6px 10px;border-top:1px solid var(--line);background:#fff}
 footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:14px}
 @media (max-width:600px){nav{display:none}}
 </style>
@@ -92,7 +97,7 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-s
 
 <section id="proyek"><div class="wrap">
   <h2>Proyek pilihan</h2>
-  <p class="sub">Gambar pada kartu adalah ilustrasi dengan data fiktif.</p>
+  <p class="sub">Tiga kartu pertama memakai ilustrasi dengan data fiktif; kartu terakhir menampilkan tangkapan layar asli.</p>
   <div class="grid">
     <article class="card">
       <span class="tag t1">Dashboard | Monitoring kinerja</span>
@@ -118,9 +123,13 @@ footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-s
       <ul><li>Impor data harian dan aturan produktif yang bisa diatur</li><li>Laporan untuk admin dan RM</li></ul>
       <div class="chips"><span class="chip">Laravel</span><span class="chip">Vue</span><span class="chip">MySQL</span></div>
     </article>
-    <article class="card">
+    <article class="card wide">
       <span class="tag t1">UI/UX | Front-end</span>
-      <figure class="mock"><svg viewBox="0 0 320 150" role="img" aria-label="Ilustrasi tata letak situs portofolio"><rect x="12" y="12" width="296" height="126" rx="6" fill="#14213D"/><rect x="22" y="20" width="16" height="8" rx="2" fill="#71C5E8"/><rect x="150" y="22" width="22" height="4" rx="2" fill="#5B6577"/><rect x="178" y="22" width="22" height="4" rx="2" fill="#5B6577"/><rect x="206" y="22" width="22" height="4" rx="2" fill="#5B6577"/><rect x="234" y="22" width="22" height="4" rx="2" fill="#5B6577"/><circle cx="282" cy="24" r="3" fill="#fff"/><circle cx="292" cy="24" r="3" fill="#fff"/><line x1="12" y1="36" x2="308" y2="36" stroke="#2A3A5E"/><rect x="22" y="46" width="96" height="58" rx="5" fill="#307FE2"/><circle cx="70" cy="68" r="11" fill="#fff" opacity=".85"/><path d="M48 104c2-16 12-22 22-22s20 6 22 22z" fill="#fff" opacity=".85"/><rect x="22" y="110" width="60" height="4" rx="2" fill="#5B6577"/><rect x="22" y="120" width="44" height="8" rx="4" fill="#0857C3"/><rect x="134" y="50" width="150" height="9" rx="3" fill="#fff"/><rect x="134" y="66" width="164" height="9" rx="3" fill="#fff"/><rect x="134" y="82" width="110" height="9" rx="3" fill="#71C5E8"/><rect x="134" y="104" width="46" height="26" rx="4" fill="#22304F" stroke="#2A3A5E"/><rect x="186" y="104" width="46" height="26" rx="4" fill="#22304F" stroke="#2A3A5E"/><rect x="238" y="104" width="46" height="26" rx="4" fill="#22304F" stroke="#2A3A5E"/></svg><figcaption>Ilustrasi tata letak halaman</figcaption></figure>
+      <div class="shots">
+        <a href="revou-hero.jpg"><img src="revou-hero.jpg" alt="Tangkapan layar bagian hero situs portofolio" loading="lazy"><span>Hero dan navigasi</span></a>
+        <a href="revou-layanan.jpg"><img src="revou-layanan.jpg" alt="Tangkapan layar bagian layanan dan pengalaman" loading="lazy"><span>Layanan dan pengalaman</span></a>
+        <a href="revou-kontak.jpg"><img src="revou-kontak.jpg" alt="Tangkapan layar ajakan bertindak dan formulir kontak" loading="lazy"><span>Ajakan bertindak dan formulir kontak</span></a>
+      </div>
       <h3>Situs Portofolio Pribadi (RevoU Mini Course)</h3>
       <p>Situs portofolio satu halaman yang saya rancang dan bangun sendiri, dari tata letak antarmuka sampai kode, pada RevoU Fundamental Course Software Engineering.</p>
       <ul><li>Merancang alur halaman: hero dengan banner slider, profil, portofolio, layanan, pengalaman, dan formulir kontak</li><li>Tata letak responsif dan navigasi antarbagian dengan HTML, CSS, dan JavaScript</li><li>Kode terbuka di GitHub</li></ul>
